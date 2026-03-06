@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 80,
-    host: true
+    host: true,
+    allowedHosts: "proyectocultiva.org"
   }
 })
