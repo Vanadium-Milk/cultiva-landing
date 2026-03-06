@@ -7,6 +7,6 @@ export default defineConfig({
   server: {
     port: 80,
     host: true,
-    allowedHosts: "proyectocultiva.org"
+    allowedHosts: ["proyectocultiva.org"],
   }
 })
