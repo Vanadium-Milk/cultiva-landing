@@ -6,10 +6,10 @@ import './styles.css';
 CONFIG Y DATOS DEL PROYECTO
 */
 const PROJECT_INFO = {
-  repoUrl: "https://github.com/Vanadium-Milk/cultiva-client/releases/tag/Debian",
+  repoUrl: "https://github.com/Vanadium-Milk/cultiva-client",
   fipi: "DUR-SI-1833",
   university: "Universidad Politécnica de Durango",
-  authors: ["Thomas Castro Moreno", "José Ignacio Contreras Méndez", "Octavio García Celaya"],
+  authors: ["Leah Valentina Castro Moreno", "José Ignacio Contreras Méndez", "Octavio García Celaya"],
   advisor: "MC Christian Ríos Chavarría",
   videoApp: "/app-demo.mp4" 
 };
