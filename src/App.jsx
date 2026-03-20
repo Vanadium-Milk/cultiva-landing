@@ -1,5 +1,5 @@
-import { Activity, ArrowRight, Brain, CheckSquare, Cpu, Database, Download, Droplets, FileText, Github, Leaf, Maximize, Menu, Package, Plug, Power, RotateCcw, Server, Sprout, Terminal, Usb, User, Wifi, Wrench, X } from 'lucide-react';
-import { useRef, useState } from 'react';
+import { Activity, ArrowRight, Brain, CheckSquare, Cpu, Database, Download, Droplets, FileText, Github, Leaf, Menu, Package, Plug, Power, RotateCcw, Server, Terminal, Usb, User, Wifi, Wrench, X, Sun } from 'lucide-react';
+import {useState } from 'react';
 import './styles.css';
 import { Logo } from './components/logo';
 
@@ -51,20 +51,6 @@ const Navbar = () => {
 };
 
 const Hero = () => {
-  const videoRef = useRef(null);
-
-  const handleFullScreen = () => {
-    if (videoRef.current) {
-      if (videoRef.current.requestFullscreen) {
-        videoRef.current.requestFullscreen();
-      } else if (videoRef.current.webkitRequestFullscreen) { /* Safari */
-        videoRef.current.webkitRequestFullscreen();
-      } else if (videoRef.current.msRequestFullscreen) { /* IE11 */
-        videoRef.current.msRequestFullscreen();
-      }
-    }
-  };
-
   return (
     <section id="hero" className="container hero">
       <div className="hero-content">
@@ -86,38 +72,45 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="hero-media-container">
-        <div className="hero-media-grid">
-          
-          <div className="media-card">
-            <div className="media-badge">
-              <Leaf size={14} color="#2ecc71" /> App en Vivo
+      <div className="hero-mockup-container">
+        <div className="phone-frame">
+          <div className="mockup-screen">
+            <div style={{width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px'}}>
+                <h3 style={{color: '#145a32', margin: 0, fontSize: '1rem'}}>CULTIVA App</h3>
+                <div style={{fontSize: '0.65rem', background: '#d5f5e3', padding: '2px 8px', borderRadius: '10px', color: '#145a32', fontWeight: 'bold'}}>ONLINE</div>
             </div>
             
-            <button onClick={handleFullScreen} className="fullscreen-btn" title="Pantalla completa">
-              <Maximize size={18} />
-            </button>
+            <div style={{width: '100%', aspectRatio: '4/3', background: '#2c3e50', borderRadius: '12px', marginBottom: '15px', position: 'relative', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                <img src='cam.jpg'/>
+                <div style={{position: 'absolute', top: '10px', right: '10px', width: '8px', height: '8px', background: 'red', borderRadius: '50%', boxShadow: '0 0 5px red'}}></div>
+                <div style={{position: 'absolute', bottom: '10px', left: '10px', color: 'white', fontSize: '0.6rem', background: 'rgba(0,0,0,0.6)', padding: '4px 8px', borderRadius: '4px', backdropFilter: 'blur(4px)'}}>
+                    CAM-1 | HORTALIZAS
+                </div>
+            </div>
 
-            <video 
-              ref={videoRef}
-              src={PROJECT_INFO.videoApp} 
-              className="media-content"
-              autoPlay 
-              loop 
-              muted 
-              playsInline
-              onError={(e) => { 
-                e.target.style.display = 'none'; 
-                e.target.nextElementSibling.style.display = 'flex'; 
-              }}
-            />
-            <div className="media-placeholder" style={{display: 'none'}}>
-               <Sprout size={40} />
-               <span style={{fontSize: '0.8rem', marginTop: '10px', fontWeight: 'bold'}}>app-demo.mp4</span>
-               <span style={{fontSize: '0.7rem'}}>Sube el video a la carpeta /public</span>
+            <div style={{width: '100%', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px'}}>
+              <div className="glass-card" style={{padding: '12px 8px', textAlign: 'center', borderRadius: '12px', background: 'rgba(255,255,255,0.5)', border: 'none'}}>
+                <Droplets size={18} color="#3498db" style={{marginBottom: '5px'}}/>
+                <div style={{fontSize: '0.9rem', fontWeight: '800', color: '#2c3e50'}}>65%</div>
+                <div style={{fontSize: '0.6rem', textTransform: 'uppercase', letterSpacing: '0.5px'}}>Humedad</div>
+              </div>
+              <div className="glass-card" style={{padding: '12px 8px', textAlign: 'center', borderRadius: '12px', background: 'rgba(255,255,255,0.5)', border: 'none'}}>
+                <Sun size={18} color="#f1c40f" style={{marginBottom: '5px'}}/>
+                <div style={{fontSize: '0.9rem', fontWeight: '800', color: '#2c3e50'}}>318 lx</div>
+                <div style={{fontSize: '0.6rem', textTransform: 'uppercase', letterSpacing: '0.5px'}}>Luz</div>
+              </div>
+              <div className="glass-card" style={{padding: '12px 8px', textAlign: 'center', borderRadius: '12px', background: 'rgba(255,255,255,0.5)', border: 'none'}}>
+                <Activity size={18} color="#e74c3c" style={{marginBottom: '5px'}}/>
+                <div style={{fontSize: '0.9rem', fontWeight: '800', color: '#2c3e50'}}>25.3°C</div>
+                <div style={{fontSize: '0.6rem', textTransform: 'uppercase', letterSpacing: '0.5px'}}>Temp</div>
+              </div>
+              <div className="glass-card" style={{padding: '12px 8px', textAlign: 'center', borderRadius: '12px', background: 'linear-gradient(135deg, rgba(46, 204, 113, 0.2), rgba(255,255,255,0.6))', border: '1px solid rgba(46, 204, 113, 0.3)'}}>
+                <Brain size={18} color="#145a32" style={{marginBottom: '5px'}}/>
+                <div style={{fontSize: '0.65rem', fontWeight: '800', color: '#145a32'}}>IA ACTIVA</div>
+                <div style={{fontSize: '0.55rem', color: '#145a32'}}>DeepSeek-R</div>
+              </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
