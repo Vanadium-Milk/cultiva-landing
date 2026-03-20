@@ -1,4 +1,4 @@
-import { Activity, ArrowRight, Brain, CheckSquare, Cpu, Database, Download, Droplets, FileText, Github, Leaf, Menu, Package, Plug, Power, RotateCcw, Server, Terminal, Usb, User, Wifi, Wrench, X, Sun } from 'lucide-react';
+import { Activity, ArrowRight, Brain, CheckSquare, Cpu, Database, Download, Droplets, FileText, Menu, Package, Plug, Power, RotateCcw, Server, Terminal, Usb, User, Wifi, Wrench, X, Sun } from 'lucide-react';
 import {useState } from 'react';
 import './styles.css';
 import { Logo } from './components/logo';
@@ -43,7 +43,7 @@ const Navbar = () => {
         <a href="#guias" className="nav-link" onClick={() => setIsOpen(false)}>Guías</a>
         <a href="#results" className="nav-link" onClick={() => setIsOpen(false)}>Resultados</a>
         <a href={PROJECT_INFO.repoUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{justifyContent: 'center'}}>
-            <Github size={18} /> GitHub Repo
+            <img src="/icons/github.svg" height={18}/> GitHub Repo
         </a>
       </div>
     </>
@@ -67,7 +67,7 @@ const Hero = () => {
             Ver Arquitectura <ArrowRight size={18} />
           </a>
           <a href={PROJECT_INFO.repoUrl} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
-            <Github size={18} /> Código Fuente
+            <img src="/icons/github.svg" height={18}/> Código Fuente
           </a>
         </div>
       </div>
@@ -315,7 +315,7 @@ const Footer = () => {
             </div>
         </div>
         <div className="footer-links">
-          <a href={PROJECT_INFO.repoUrl} target="_blank" rel="noopener noreferrer" className="footer-link"><Github size={18} /></a>
+          <a href={PROJECT_INFO.repoUrl} target="_blank" rel="noopener noreferrer" className="footer-link"><img src='icons/github.svg' height={18}/></a>
           <a href="https://www-gnu-org.translate.goog/licenses/gpl-3.0.html?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc" target="_blank" rel="noopener noreferrer" className="footer-link">Licencia GPL v3</a>
         </div>
         <p style={{fontSize: '0.75rem', marginTop: '30px', opacity: 0.6}}>© 2026 Proyecto CULTIVA. Open Source.</p>
