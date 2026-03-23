@@ -7,10 +7,10 @@ export default function Downloads() {
             <Navbar links={[
                 {link: "/", name: "Inicio"}
             ]}/>
-            <section style={{margin: "120px"}}>
+            <section style={{margin: "100px"}}>
                 <h1 style={{marginBottom: "30px"}}>Descargas</h1>
-                <div style={{flexDirection: "row", display: "flex", gap: "40px", justifyContent: "center"}}>
-                    <div className="glass-card" style={{width: "50%"}}>
+                <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '20px'}}>
+                    <div className="glass-card">
                         <h2>Applicación para computadora de huerto</h2>
                         <p>Descarga el paquete e instala con sudo dpkg -i cultiva_v1.0.0-beta_amd64.deb <br/>
                             Si tienes dependencias faltantes ejecuta: <br/>
@@ -24,7 +24,7 @@ export default function Downloads() {
                             </a>
                         </div>
                     </div>
-                    <div className="glass-card" style={{width: "50%", display: "flex", flexDirection: "column", justifyContent: "space-between"}}>
+                    <div className="glass-card" style={{display: "flex", flexDirection: "column", justifyContent: "space-between"}}>
                         <h2>Applicación móvil Android</h2>
                         <p>Descarga el APK y ejecutalo, tu teléfono se encargará del resto <br/>
                             Aún estamos trabajando para publicar en la Play store y App store
