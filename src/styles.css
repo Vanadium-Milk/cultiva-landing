@@ -229,8 +229,6 @@ p { color: var(--text-light); margin-bottom: 1rem; }
 .footer-link { color: var(--dark-green); transition: color 0.3s; text-decoration: none; }
 .footer-link:hover { color: var(--primary-green); }
 
-
-
 /* MEDIA QUERIES */
 @media (min-width: 768px) {
     h1 { font-size: 3.5rem; }
